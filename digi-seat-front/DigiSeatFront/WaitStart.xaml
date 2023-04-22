@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="DigiSeatFront.WaitStart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiSeatFront"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0" Padding="0">
+        <!--<Grid Height="400" Width="300" Background="Transparent" Margin="853,289,287,271">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Ellipse Margin="5" Fill="Gray" Tapped="Phone_Tapped"  Canvas.ZIndex="12"/>
+            <TextBlock Text="1" FontSize="36" Padding="40 25 0 0" Tapped="Phone_Tapped" Canvas.ZIndex="12"></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="0" Grid.Column="1"/>
+            <TextBlock Text="2" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="0" Grid.Column="1" Tapped="Phone_Tapped" ></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="0" Grid.Column="2"/>
+            <TextBlock Text="3" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="0" Grid.Column="2" Tapped="Phone_Tapped" ></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="1"/>
+            <TextBlock Text="4" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="1" Grid.Column="0" Tapped="Phone_Tapped" ></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Text="5" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="1" Grid.Column="1" Tapped="Phone_Tapped"></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="1" Grid.Column="2"/>
+            <TextBlock Text="6" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="1" Grid.Column="2" Tapped="Phone_Tapped" ></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="2" Grid.Column="0"/>
+            <TextBlock Text="7" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="2" Grid.Column="0" Tapped="Phone_Tapped" ></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock Text="8" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="2" Grid.Column="1" Tapped="Phone_Tapped" ></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="2" Grid.Column="2"/>
+            <TextBlock Text="9" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="2" Grid.Column="2" Tapped="Phone_Tapped" ></TextBlock>
+
+            <Ellipse Margin="5" Fill="Gray" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Text="0" FontSize="36" Padding="40 25 0 0" Canvas.ZIndex="2" Grid.Row="3" Grid.Column="1" Tapped="Phone_Tapped" ></TextBlock>
+        </Grid>-->
+        <TextBlock HorizontalAlignment="Left" FontSize="40" Margin="361,68,0,0" TextWrapping="Wrap" Text="{x:Bind WaitText}" VerticalAlignment="Top" Height="79" Width="652"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="40" Margin="361,152,0,0" TextWrapping="Wrap" Text="Would you like to put in your name?" VerticalAlignment="Top" Height="79" Width="652"/>
+        <TextBox InputScope="Number" HorizontalAlignment="Left" FontSize="46" Margin="787,317,0,0" TextWrapping="Wrap" Text="{x:Bind PhoneNumber,Mode=TwoWay}" PlaceholderText="(000)-000-0000" VerticalAlignment="Top" Height="69" Width="416" TextChanged="TextBox_TextChanged"/>
+        <TextBox InputScope="Text" HorizontalAlignment="Left" FontSize="46" Margin="211,317,0,0" TextWrapping="Wrap" Text="{x:Bind CustomerName, Mode=TwoWay}" PlaceholderText="Name" VerticalAlignment="Top" Height="69" Width="416" />
+        <Button Content="Continue" FontSize="46" Background="SlateGray" HorizontalAlignment="Left" Margin="787,728,0,0" VerticalAlignment="Top" Height="104" Width="416" Click="Continue_Clicked"/>
+        <Button Content="No Thanks" FontSize="46" Background="White" BorderBrush="SlateGray" HorizontalAlignment="Left" Margin="211,728,0,0" VerticalAlignment="Top" Height="104" Width="416" Click="NoThanks_Clicked"/>
+    </Grid>
+</Page>

@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="DigiSeatBack.LightTester"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiSeatBack"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="695,84,0,0" TextWrapping="Wrap" Text="Light Tester" VerticalAlignment="Top"/>
+        <Button Content="Get Device Color" Background="SlateGray" Tapped="Get_Device_Color_Tapped" HorizontalAlignment="Left" Margin="260,256,0,0" VerticalAlignment="Top" Height="71" Width="250"/>
+        <TextBlock HorizontalAlignment="Left" Margin="791,256,0,0" TextWrapping="Wrap" Text="{x:Bind LightState}" VerticalAlignment="Top" Height="71" Width="459"/>
+        <TextBox Text="{x:Bind Saturation, Mode=TwoWay}" HorizontalAlignment="Left" Margin="295,437,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="441,437,0,0" TextWrapping="Wrap" Text="{x:Bind R, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="608,437,0,0" TextWrapping="Wrap" Text="{x:Bind G, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="771,437,0,0" TextWrapping="Wrap" Text="{x:Bind B, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="984,437,0,0" TextWrapping="Wrap" Text="{x:Bind Effect, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="1186,437,0,0" TextWrapping="Wrap" Text="{x:Bind Speed, Mode=TwoWay}" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

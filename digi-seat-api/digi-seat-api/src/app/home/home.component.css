@@ -1,0 +1,36 @@
+
+.numberpad {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  background-color: lightslategrey;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 5px;
+
+}
+
+.number {
+  background-color: white;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  margin: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.number:hover{
+  background-color: gray;
+}
+
+.number-text{
+  position:absolute;
+  top: 17%;
+  font-size: 70px;
+  left:38%;
+  
+}

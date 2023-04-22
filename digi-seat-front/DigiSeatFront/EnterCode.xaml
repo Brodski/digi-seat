@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="DigiSeatFront.EnterCode"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiSeatFront"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock FontSize="58" TextAlignment="Center" HorizontalAlignment="Left" Margin="444,200,0,0" TextWrapping="Wrap" Text="Enter your code" VerticalAlignment="Top" Height="90" Width="555"/>
+        <TextBox InputScope="Number" HorizontalAlignment="Left" FontSize="58" Margin="509,357,0,0" TextWrapping="Wrap" Text="{x:Bind Code, Mode=TwoWay}" VerticalAlignment="Top" Height="90" Width="410"/>
+        <Button Content="Next" FontSize="46" Background="SlateGray" BorderBrush="SlateGray" HorizontalAlignment="Left" Margin="509,624,0,0" VerticalAlignment="Top" Height="124" Width="410" Click="Next_Clicked"/>
+        <Button Content="Go Back" FontSize="46" Background="White" BorderBrush="SlateGray" HorizontalAlignment="Left" Margin="509,791,0,0" VerticalAlignment="Top" Height="91" Width="410" Click="GoBack_Clicked"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,15 @@
+﻿<Page
+    x:Class="DigiSeatBack.CreateStaff"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiSeatBack"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Create"  Margin="778,472,0,0" Tapped="Create_Tapped"/>
+        <TextBox PlaceholderText="Name" HorizontalAlignment="Left" Margin="447,470,0,0" VerticalAlignment="Top" Height="50" Width="219" Text="{x:Bind _name, Mode=TwoWay}"/>
+    </Grid>
+</Page>

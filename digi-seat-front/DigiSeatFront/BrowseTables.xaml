@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="DigiSeatFront.BrowseTables"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiSeatFront"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Name="baseGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <FlyoutBase.AttachedFlyout>
+            <Flyout x:Name="specialTableFlyout">
+                <Grid Height="600" Width="400" Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="380"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Margin="10" Height="100" Grid.Row="0" FontSize="30" Text="How can we help?"></TextBlock>
+                    <TextBlock Grid.Row="1" Margin="10 0 0 0" Text="Type of table: "></TextBlock>
+                </Grid>
+            </Flyout>
+        </FlyoutBase.AttachedFlyout>
+        <Button Content="Booth" FontSize="40" HorizontalAlignment="Center" Background="White" BorderThickness="1" BorderBrush="Gray" Margin="399,407,477,0" VerticalAlignment="Top" Height="150" Width="564" Tapped="Best_Booth_Tapped"/>
+        <Button Content="Table" FontSize="40" HorizontalAlignment="Center" Background="White" BorderThickness="1" BorderBrush="Gray" Margin="399,171,477,0" VerticalAlignment="Top" Height="150" Width="564" Tapped="Best_Table_Tapped"/>
+        <!--<Button Content="Something else?" FontSize="40" HorizontalAlignment="Center" Background="White" BorderThickness="1" BorderBrush="Gray" Margin="399,772,477,0" VerticalAlignment="Top" Height="102" Width="564" Tapped="Other_Needs_Tapped"/>-->
+    </Grid>
+</Page>

@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="DigiSeatFront.AcceptedTable"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiSeatFront"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="508,238,0,0" TextWrapping="Wrap" FontSize="40" Text="{x:Bind TableDirections, Mode=OneWay}" VerticalAlignment="Top" Height="141" Width="539" />
+        <TextBlock HorizontalAlignment="Left" Margin="508,384,0,0" TextWrapping="Wrap" FontSize="40" Text="{x:Bind LightText, Mode=OneWay}" VerticalAlignment="Top" Height="82" Width="506"/>
+        <TextBlock HorizontalAlignment="Left" Margin="413,471,0,0" TextWrapping="Wrap" FontSize="40" Text="Your server will be with you shortly." VerticalAlignment="Top" Height="82" Width="634" />
+        <Button Content="Home" Background="White" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Margin="574,785,0,0" VerticalAlignment="Top" Height="91" Width="401" Click="Button_Click"/>
+
+    </Grid>
+</Page>

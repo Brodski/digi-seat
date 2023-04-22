@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="DigiSeatBack.CreateTable"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiSeatBack"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Height="700" Width="400" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="380"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="10" Height="100" Grid.Row="0" FontSize="30" Text="Set Table Details"></TextBlock>
+            <TextBlock Grid.Row="1" Margin="10 0 0 0" Text="Type of table: "></TextBlock>
+            <StackPanel Grid.Row="1" Margin="10" Orientation="Horizontal" >
+                <RadioButton Name="Radio_Booth" GroupName="Table_Type" Content="Booth" Tag="booth" Checked="Add_Table_Type_Checked"></RadioButton>
+                <RadioButton Name="Radio_Table" GroupName="Table_Type"  Content="Table" Tag="table" Checked="Add_Table_Type_Checked"></RadioButton>
+                <RadioButton Name="Radio_Split" GroupName="Table_Type" Content="Split" Tag="split" Checked="Add_Table_Type_Checked"></RadioButton>
+            </StackPanel>
+            <TextBlock Grid.Row="2" Margin="10 0 0 0" Text="Shape of table: "></TextBlock>
+            <StackPanel Grid.Row="2" Margin="10" Orientation="Horizontal" >
+                <RadioButton Name="Radio_Round" GroupName="Table_Shape" Content="Round" Tag="round" Checked="Add_Table_Shape_Checked"></RadioButton>
+                <RadioButton Name="Radio_Square" GroupName="Table_Shape" Content="Square" Tag="square" Checked="Add_Table_Shape_Checked"></RadioButton>
+                <RadioButton Name="Radio_Rectangle" GroupName="Table_Shape" Content="Rectangle" Tag="rectangle" Checked="Add_Table_Shape_Checked"></RadioButton>
+            </StackPanel>
+            <TextBox PlaceholderText="Light Address" Padding="12" Margin="10,10,125,10" Grid.Row="3" Text="{x:Bind _addTable.LightAddress, Mode=TwoWay}"></TextBox>
+            <TextBox PlaceholderText="Table Number" Padding="12" Margin="10" Grid.Row="4" Text="{x:Bind _addTable.Number, Mode=TwoWay}"></TextBox>
+            <Slider Margin="10" Grid.Row="5" Header="Table Capacity" Width="auto" StepFrequency="1" Minimum="1" Maximum="12" Value="{x:Bind _addTable.Capacity, Mode=TwoWay}" ></Slider>
+            <Button Margin="10 0 0 0" Width="370"  Background="SlateGray" BorderBrush="SlateGray" Height="60" Grid.Row="6" Content="Save" Tapped="SaveTable_Tapped"></Button>
+            <Button Margin="10,100,0,-60" Width="370"  Background="White" BorderBrush="SlateGray" Height="60" Grid.Row="6" Content="Go Back" Tapped="Go_Back_Tapped"></Button>
+            <Button Content="Sync Light" Tapped="SyncLight_Tapped" Background="SlateGray" Height="50" HorizontalAlignment="Left" Margin="270,10,0,10" Grid.Row="3" VerticalAlignment="Top" Width="100">
+                <Button.Flyout>
+                    <Flyout x:Name="LightSearch" Closed="LightSearch_Closed">
+                        <Grid Height="200" Width="400">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="400"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Margin="10 0 0 0" Text="Searching for lights. Turn on the light you want to connect."></TextBlock>
+                            <TextBlock Grid.Row="1" Margin="10 0 0 0" Visibility="{x:Bind LightFound}" Text="Light Found"></TextBlock>
+                            <TextBlock Grid.Row="2" Margin="10 0 0 0" Text="{x:Bind _addTable.LightAddress}" Visibility="{x:Bind LightFound}"></TextBlock>
+                            <Button Grid.Row="3" Background="SlateGray" Height="50" Tapped="CloseLightSearch_Tapped" Content="Close" Margin="105,0,0,0" Width="167"></Button>
+                        </Grid>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,7 @@
+<div class="home">
+  <div class="numberpad">
+    <div *ngFor="let number of numbers" class="number"  (click)="selectTable(number.val)">
+      <div class="number-text">{{number.val}}</div>
+    </div>
+  </div>
+</div>
